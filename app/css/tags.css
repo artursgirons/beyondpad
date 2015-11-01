@@ -1,0 +1,285 @@
+.tags {
+    font-size:medium;
+    white-space:normal;
+}
+
+.tags input, .tags textarea {
+    width:125px;
+    height:26px;
+    border: 0;
+    font-family: Roboto,arial,sans-serif;
+    outline: 0;
+    padding: 0;
+    background-color:transparent;
+    margin:2px 0 2px 3px;
+    color:#888;
+    resize: none;
+}
+
+.lookup {
+    max-height:150px;
+    overflow:auto;
+    background-color: white;
+    border:1px solid #dedede;
+    border-radius:2px;
+    margin:2px;
+}
+
+.tag {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    max-width: 100%;
+
+    position:relative;
+    padding:0;
+    margin:0;
+    display: inline-block;
+
+    padding: 2px;
+
+}
+
+.linkedtags {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    position:absolute;
+    width:100%;
+    background-color:#d6d6d6;
+    border-radius:3px;
+    margin:0;
+    padding:0;
+    padding-top:35px;
+    display:inline-block;
+    overflow:visible;
+}
+
+.linkedtagscont {
+    background-color:#d6d6d6;
+    border-radius:3px;
+    display:block;
+    position:absolute;
+    padding:0;
+    padding-bottom:2px;
+    top:29px;
+    z-index:1000;
+}
+
+.tagcontent {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 7px 0 1px;
+    border-radius: 2px;
+    border: 1px solid #eeeeee;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    line-height: 23px;
+    color: #888;
+    font-weight: normal;
+    background-color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    position:relative;
+}
+
+.tag i{
+    margin-right:1px;
+}
+
+
+.lookup .tag, .lookup .tagcontent {
+    display:block;
+    border-color: transparent;
+    padding:0;
+    border-radius:0;
+    max-width: 100%;
+}
+
+.tagcontent.active {
+    background-color: #eeeeee;
+    border-color: #dedede;
+}
+
+.tagcontent:hover {
+}
+
+.lookup .tagcontent.active, .lookup .tagcontent:hover {
+    border-color:transparent;
+}
+
+.view .tagcontent:hover {
+    _background-color: white;
+    _border-color: #eeeeee;
+    cursor:default;
+}
+
+.tagcontent.remove {
+    padding:0 1px 0 1px;
+}
+
+.notetag{
+    background-color:#F5F5F5;
+    border-bottom:1px solid #d8d8d8;
+    font-family:'Roboto Slab';
+    font-weight:200;
+
+    font-size:1.3em;
+    padding:4px;
+    color:black;
+    position:relative;
+    padding-left:37px;
+    padding-right:5px;
+    padding-right:37px;
+}
+
+.notetag input, .notetag textarea {
+
+    display:block;
+
+    margin:2px 0 2px 0;
+    width:255px;
+    border: 0;
+
+    font-family:'Roboto Slab';
+    font-weight:200;
+
+    font-size:1em;
+
+    outline: 0;
+    padding: 0;
+    background-color:transparent;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    resize: none;
+}
+
+.notetag .name {
+    margin: 2px 0 2px 0;
+    padding-top: 4px;
+    padding-bottom: 3px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    line-height: 1;
+}
+
+.notetag .tab {
+    float:right;
+    line-height:32px;
+    color:#888;
+}
+
+.notetag .tab.active {
+    border-bottom:4px solid #F56545;
+}
+
+.notetag .down {
+    color:#d8d8d8;
+    font-size:20px;
+    position:absolute;
+    left:6px;
+    bottom:-7px;
+
+    text-shadow:0px -1px 0px #d8d8d8;
+}
+
+.contextswitch {
+    position:absolute;
+    top:1px;
+    left:0;
+    width:37px;
+    padding:4px 3px;
+    box-sizing:border-box;
+    height:39px;
+}
+
+.contextswitch .currenctcontext{
+    height:34px;
+    text-align:center;
+    line-height:31px;
+}
+
+.contextswitch .switchcontext{
+    margin-top:-1px;
+    display:none;
+    position:relative;
+    text-align:center;
+    line-height:31px;
+    border-radius:4px;
+    background-color:#F5F5F5;
+    border:1px solid #d8d8d8;
+    z-index:10;
+}
+
+.contextswitch.view:hover .currenctcontext{
+    display:none;
+}
+
+.contextswitch.view:hover .switchcontext{
+    display:block;
+}
+
+.contextswitch.view:hover .switchcontext i{
+    cursor:pointer;
+}
+
+.tagstatus {
+    position:absolute;
+    top:1px;
+    right:0;
+    width:33px;
+    box-sizing:border-box;
+    height:39px;
+    line-height:39px;
+}
+
+.tagstatus .error {
+    color:#F56545;
+}
+
+.tagstatus .link {
+    color:#888;
+}
+
+.retagmenu > .retag {
+    width:250px;
+    padding:5px;
+    max-height:400px;
+    overflow:auto;
+}
+
+.retagApply {
+    border-top: 1px solid #d8d8d8;
+    padding:5px;
+    background-color:#FFF;
+    color:#555;
+    cursor:pointer;
+    text-align:center;
+    font-family:Roboto Slab;
+    border-radius:0 0 3px 3px;
+}
+
+.retagApply:hover {
+    border-color: #C4DAEE;
+    background-color: #DFEBF6;
+}

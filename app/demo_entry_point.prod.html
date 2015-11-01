@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Beyondpad</title>
+
+    <meta charset="utf-8" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="128x128" href="/icon_128.png">
+
+    <link rel="stylesheet" href="/css/build/app.min.css?v=0035">
+
+    <script src="/js/build/demo.min.js?v=0035"></script>
+
+    <script src="/js/build/lib.min.js?v=0035"></script>
+    <script>
+        if (typeof Windows !== 'undefined') {
+            var firstScript = document.getElementsByTagName('script')[0];
+            var script = document.createElement('script');
+            script.src = "/js/app/misc/uwa.js?v=0035";
+            //script.src = "ms-appx-web:///uwp/uwa.js?v=0035";
+            firstScript.parentNode.insertBefore(script, firstScript);
+        }
+    </script>
+    <script src="/js/build/app.min.js?v=0035"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="loadingdata">
+            <div class="loadingdatatext">Loading...</div>
+        </div>
+        <div id="fontFix"></div>
+    </div>
+</body>
+</html>

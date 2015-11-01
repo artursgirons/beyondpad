@@ -1,0 +1,161 @@
+﻿#container {
+    width:350px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:50px;
+}
+#logo {
+    width:350px;
+    height:90px;
+    background-image: url("../img/logo_text_350.png");
+    margin-top:30px;
+    margin-bottom:30px;
+    display:none;
+}
+#actions {
+    padding:0 12px;
+}
+.button {
+    font-family:sans-serif;
+    border-radius:3px;
+    font-size:16px;
+    line-height:44px;
+    padding:0 10px;
+    margin-bottom:10px;
+    color:white;
+    display:block;
+    text-decoration:none;
+    opacity:0.95;
+    cursor:pointer;
+}
+
+.button:hover {
+    opacity:1;
+}
+
+.button i {
+    padding-right:10px;
+}
+
+.button.g {
+    background-color:#B9341D;
+    border-color:#B9341D;
+}
+
+.button.b {
+    background-color:#646464;
+    border-color:#646464;
+}
+
+.button.f {
+    background-color: #4963A4;
+    border-color:#4963A4;
+}
+
+.button.t {
+    background-color: #55ACEE;
+    border-color:#55ACEE;
+}
+
+.button.m {
+    background-color: #32BAEB;
+    border-color:#32BAEB;
+}
+
+.button.e {
+    background-color: #62b346;
+    border-color:#62b346;
+}
+
+.inputContainer {
+    padding:10px 20px;
+}
+
+.fieldValue {
+    margin-bottom:10px;
+    padding-top:3px;
+}
+
+.inputContainer input {
+    outline:none;
+    font-family:sans-serif;
+    padding:5px 5px;
+    font-size:16px;
+    border-radius:3px;
+    border:1px solid #62b346;
+    width:270px;
+}
+
+#signin, #signup, #reset, #newpassword {
+    font-family:sans-serif;
+    border-radius:3px;
+    font-size:16px;
+    border:1px solid #62b346;
+    margin-bottom:10px;
+}
+
+.actions {
+        padding:0 23px;
+    text-align:right;
+    padding-bottom:3px;
+
+}
+.submit {
+    display:inline-block;
+    line-height:35px;
+    padding-left:25px;
+    padding-right:25px;
+    border:none;
+}
+
+.links {
+    padding:0 23px;
+    text-align:center;
+    padding-bottom:12px;
+}
+
+.green {
+        color:#409623;
+}
+
+.fright {
+    float:right;
+}
+
+.fleft {
+    float:left;
+}
+
+.alter {
+    line-height:35px;
+}
+
+.loadingdata {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.loadingdatatext {
+    position:absolute;
+
+    top:50%;
+
+    margin-top:-13px;
+
+    text-align:center;
+    width:100%;
+
+
+    margin-left:auto;
+    margin-right:auto;
+
+
+
+    font-family: Arial;
+    color: #666;
+    font-size: 18px;
+    font-weight: 200;
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Beyondpad",
+    "description": "Notes, boards and lists, templates and forms, tags and other tools for data driven note taking",
+    "version": "0.0.0.2",
+    "launch_path": "/start",
+    "icons": {
+        "128": "/icon_128.png"
+    },
+    "developer": {
+        "name": "Arturs Girons",
+        "url": "http://www.piip.lv"
+    },
+    "default_locale": "en"
+}

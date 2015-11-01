@@ -1,0 +1,115 @@
+﻿.boardoverview {
+    position:relative;
+}
+
+.boarditem {
+    display: inline-block;
+    color: #666;
+    background-color: #FFFFFF;
+    border: 1px solid #d8d8d8;
+    width: 300px;
+    position: absolute;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border-radius:2px;
+}
+
+.boarditem.view {
+    cursor:default;
+}
+
+.boarditem.edit {
+    -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+}
+
+.boarditem.placeholder {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(216, 216, 216, 0.75);
+    cursor:pointer;
+}
+.boarditem.placeholder:hover {
+    background-color: #FFFFFF;
+    border: 1px solid #d8d8d8;
+}
+
+.boarditem.placeholder .text{
+    font-family: Roboto Slab,arial,sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #444;
+    padding:10px;
+}
+
+
+.boarditem .title{
+    padding: 10px;
+}
+.boarditem .value {
+    font-family: Roboto Slab,arial,sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: block;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    width: 100%;
+    color: #444;
+    resize: none;
+}
+
+.boarditem .list{
+    padding:0 10px 10px 10px;
+    font-family: Roboto Slab,arial,sans-serif;
+    font-weight: 300;
+}
+
+.boarditem .more {
+    display:none;
+    position:absolute;
+    bottom:4px;
+    right:4px;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    text-align:center;
+}
+
+.boarditem.view:hover .more {
+    display:inline-block;
+}
+
+.boarditem.edit .more {
+    display:inline-block;
+}
+
+.boarditem .save {
+    position:absolute;
+    bottom:1px;
+    right:30px;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    text-align:center;
+}
+
+.boarditem .more:hover, .boarditem .save:hover {
+    border-radius: 2px;
+    background-color: #888;
+    color:white;
+}

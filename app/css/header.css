@@ -1,0 +1,84 @@
+﻿#title {
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 19px;
+    line-height: 55px;
+    color: #bbbbbb;
+    margin-left: 18px;
+    font-weight: normal;
+    background-image: url(../img/logo_header.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    -moz-background-size: 35px 35px;
+    -o-background-size: 35px 35px;
+    -webkit-background-size: 35px 35px;
+    background-size: 35px 35px;
+    padding-left: 47px;
+}
+
+#search {
+    width: 450px;
+    display:inline-block;
+    border:1px solid #bababa;
+    border-radius:2px;
+    position:relative;
+    top:10px;
+    margin-left:30px;
+}
+ 
+#search input {
+    width: 360px;
+    height: 20px;
+    padding: 6px 10px;
+    float: left;
+    font-family: 'Roboto Slab', serif;
+    font-size:1em;
+    color:#666;
+
+    border: 0;
+    outline:none;
+}
+ 
+#search button {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 32px;
+    width: 40px;
+    outline:none;
+    background-color: #fafafa;
+    border-left:1px solid #dddddd;
+    color: #999;
+}
+
+#search button:hover {
+    background-color: #f1f1f1;
+    border-left:1px solid #bababa;
+}   
+   
+#search button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+#account {
+    font-family: 'Roboto Slab', serif;
+    float:right;
+    margin:0 10px;
+    color:#999;
+    vertical-align:central;
+    display:inline-block;
+    line-height: 55px;
+}
+
+#accountname {
+    float:left;
+    font-size: 15px;
+}
+#accounticon{
+    float:right;
+    font-size:25px;
+}

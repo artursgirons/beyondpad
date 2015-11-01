@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Beyondpad</title>
+
+    <meta charset="utf-8" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="128x128" href="/icon_128.png">
+
+    <script src="/js/lib/jquery.js"></script>
+    <script src="/js/lib/lodash.js"></script>
+    <script src="/js/lib/json2.js"></script>
+
+    <style type="text/css">
+
+        html, body {
+            height:100%;
+            width:100%;
+            margin:0;
+            padding:0;
+        }
+
+        #wrapper {
+            height:100%;
+            width:100%;
+	        display: flex;
+            align-items:stretch;
+        }
+
+        #json {
+            flex-grow:1;
+            resize:none;
+        }
+
+        #xml {
+            flex-grow:1;
+            resize:none;
+        }
+
+        #java {
+            flex-grow:1;
+            resize:none;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+
+        var convertLogicXML = function (jsonString) {
+            try {
+                var json = JSON.parse(jsonString);
+
+                return (
+                    _.map(json.icons, function (icon) {
+                        return '<enum name="' + icon.properties.name.replace(/-|\s/gi, '_') + '" value="' + icon.properties.code + '"/>';
+                    }).join('\r\n')
+                )
+            } catch (e) {
+                return "ERROR: parsing json";
+            }
+        }
+
+        var convertLogicJava = function (jsonString) {
+            try {
+                var json = JSON.parse(jsonString);
+
+                return (
+                    _.map(json.icons, function (icon) {
+                        return "public static final int " + icon.properties.name.replace(/-|\s/gi, '_') + " = " + icon.properties.code + ";";
+                    }).join('\r\n')
+                )
+            } catch (e) {
+                return "ERROR: parsing xml";
+            }
+        }
+
+        var convert = function () {
+            $('#xml').val(convertLogicXML($('#json').val()));
+            $('#java').val(convertLogicJava($('#json').val()));
+        }
+
+        var handleFileSelect = function(evt) {
+            evt.stopPropagation();
+            evt.preventDefault();
+
+            var files = evt.dataTransfer.files;
+            var reader = new FileReader();
+            reader.onload = function (event) {
+                document.getElementById('json').value = event.target.result;
+                convert();
+            }
+            reader.readAsText(files[0], "UTF-8");
+        }
+
+        var handleDragOver = function(evt) {
+            evt.stopPropagation();
+            evt.preventDefault();
+            evt.dataTransfer.dropEffect = 'copy';
+        }
+
+        $(document).ready(function () {
+
+            var dropZone = document.getElementById('json');
+
+            dropZone.addEventListener('dragover', handleDragOver, false);
+            dropZone.addEventListener('drop', handleFileSelect, false);
+
+            $('#convert').click(function () {
+                convert();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <textarea id="json" placeholder="icomoon selection.json"></textarea>
+        <button id="convert">></button>
+        <textarea id="xml" placeholder="android attrs.xml enum list"></textarea>
+        <textarea id="java" placeholder="android .java enum list"></textarea>
+    </div>
+</body>
+</html>

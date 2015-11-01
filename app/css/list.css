@@ -1,0 +1,169 @@
+﻿.boardlistwrapper {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:0;
+    white-space:nowrap;
+}
+
+.boardlist {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: inline-block;
+
+    border-right: 1px solid #d8d8d8;
+    border-left: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+
+    margin-left:-1px;
+
+    vertical-align:top;
+
+    width:337px;
+
+    position:relative;
+
+    background-color:#F8F8F8;
+
+    height: 100%;
+}
+
+.newboardlist{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+
+    vertical-align:top;
+    width:337px;
+    position:relative;
+    height: 100%;
+
+    font-size:25px;
+    color:#666;
+    line-height:38px;
+
+    font-family: Roboto Slab,arial,sans-serif;
+    font-weight:200;
+    font-size:21px;
+    padding-left:10px;
+}
+
+.newboardlist span {
+    cursor:pointer;
+}
+
+.boardlist.view {
+}
+
+.boardlist .note {
+    margin:15px auto;
+    _display:block;
+    _width:auto;
+}
+
+.boardlist .head {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    height:39px;
+
+    padding: 4px 10px;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #F5F5F5;
+    position: relative;
+}
+
+.boardlist .head .more {
+    position:absolute;
+    top:50%;
+    margin-top:-11px;
+    right:7px;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    text-align:center;
+    cursor:pointer;
+    color:#666;
+}
+
+.boardlist .head .newnote {
+    position:absolute;
+    top:50%;
+    margin-top:-11px;
+    right:35px;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    text-align:center;
+    cursor:pointer;
+    color:#666;
+}
+
+.boardlist .head .more:hover, .boardlist .head .newnote:hover {
+    border-radius: 2px;
+    background-color: #888;
+    color:white;
+}
+
+.boardlist .head .value {
+    border: 0;
+
+    font-family: Roboto Slab,arial,sans-serif;
+    font-weight:300;
+    font-size:21px;
+
+    line-height:1;
+
+    color:#666;
+    background-color:transparent;
+
+    white-space:nowrap;
+    display:block;
+
+    outline: 0;
+    padding:4px 0;
+
+    resize: none;
+    margin:0;
+    width:90%;
+}
+
+.boardlist .options {
+    padding:5px;
+}
+
+.boardlist .body{
+    position:absolute;
+    top:39px;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:auto;
+
+    white-space:normal;
+}
+
+.boardlist .footer {
+    white-space:normal;
+    font-family: Roboto,arial,sans-serif;
+    position:relative;
+    color:#666;
+    padding:10px;
+    text-align:right;
+}
+
+.boardlist .footer .button{
+    padding:0 5px;
+    background:#EEE;
+    border:1px solid #d8d8d8;
+    border-radius:2px;
+    display:inline-block;
+    line-height:25px;
+
+}

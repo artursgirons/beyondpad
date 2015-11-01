@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Beyondpad - Sign in</title>
+
+    <meta charset="utf-8" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="viewport" content="width=425">
+    <link rel="icon" sizes="128x128" href="/icon_128.png">
+
+    <link href="/icons/css/beyondpad.css?v=0035" rel="stylesheet" />
+    <link href="/css/reset.css?v=0035" rel="stylesheet" />
+    <link href="/css/signin.css?v=0035" rel="stylesheet" />
+
+    <script src="/js/app/misc/analytics.js?v=0035"></script>
+    <script src="/js/lib/jquery.min.js?v=0035"></script>
+    <script>
+        if (typeof Windows !== 'undefined') {
+            var firstScript = document.getElementsByTagName('script')[0];
+            var script = document.createElement('script');
+            script.src = "/js/app/misc/uwa.js?v=0035";
+            //script.src = "ms-appx-web:///uwp/uwa.js?v=0035";
+            firstScript.parentNode.insertBefore(script, firstScript);
+        }
+    </script>
+    <script src="/js/app/signin.js?v=0035"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="logo"></div>
+
+        <div id="actions">
+            <a class="button b" id="demo" href="#">
+                <i class="icon-lock-open"></i>
+                <span>Demo mode</span>
+            </a>
+
+            <a class="button g" id="google" href="#">
+                <i class="icon-gplus"></i>
+                <span>Sign in with Google</span>
+            </a>
+            <a class="button f" id="facebook" href="#">
+                <i class="icon-facebook"></i>
+                <span>Sign in with Facebook</span>
+            </a>
+            <a class="button t" id="twitter" href="#">
+                <i class="icon-twitter"></i>
+                <span>Sign in with Twitter</span>
+            </a>
+            <a class="button m" id="microsoft" href="#" style="display:none;">
+                <i class="icon-th-large-1"></i>
+                <span>Sign in with Microsoft account</span>
+            </a>
+
+            <div id="signin">
+                    <div class="button e">
+                        <i class="icon-mail"></i>
+                        <span>Sign in with Email & Password </span>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="fieldName">E-mail</div>
+                        <div class="fieldValue">
+                            <input type="text" autofocus="autofocus" id="signin_email" />
+                        </div>
+                        <div class="fieldName">Password</div>
+                        <div class="fieldValue">
+                            <input type="password" id="signin_password" />
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="button e submit" id="signin_submit">Sign in</button>
+                        <a href="#" class="fleft green alter showSignUp">Sign up</a>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="green showReset">Forgot password</a>
+                    </div>
+            </div>
+
+            <div id="signup">
+                    <div class="button e">
+                        <i class="icon-mail"></i>
+                        <span>Sign up with Email & Password </span>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="fieldName">E-mail</div>
+                        <div class="fieldValue">
+                            <input type="text" autofocus="autofocus" id="signup_email" />
+                        </div>
+                        <div class="fieldName">Password</div>
+                        <div class="fieldValue">
+                            <input type="password" id="signup_password" />
+                        </div>
+                        <div class="fieldName">Password (repeat)</div>
+                        <div class="fieldValue">
+                            <input type="password" id="signup_passwordRepeat" />
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="button e submit" id="signup_submit">Sign up</button>
+                        <a href="#" class="fleft green alter showSignIn">Back</a>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="green showReset">Forgot password</a>
+                    </div>
+            </div>
+
+            <div id="reset">
+                    <div class="button e">
+                        <i class="icon-mail"></i>
+                        <span>Forgot password</span>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="fieldName">E-mail</div>
+                        <div class="fieldValue">
+                            <input type="text" autofocus="autofocus" id="reset_email" />
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="button e submit" id="reset_submit">Send e-mail</button>
+                    </div>
+                    <div class="links">
+                        <a href="#" class="fleft green showSignUp">Sign up</a>
+                        <a href="#" class="fright green showSignIn">Sign in</a>
+                        <div style="clear:both;"></div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="loadingdata" style="display:none;">
+        <div class="loadingdatatext">Your browser is not supported at the moment (use Chrome, Firefox, Opera, Safari or IE10+)</div>
+    </div>
+</body>
+</html>

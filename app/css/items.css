@@ -1,0 +1,506 @@
+﻿.groupName{
+    display:inline-block;
+    position:absolute;
+    top:3px;
+    left:15px;
+    padding-right:7px;
+    font-size:16px;
+    font-style:italic;
+    font-weight:300;
+    background-color:inherit;
+    color:#1f1f1f;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    max-width:260px;
+}
+
+.fieldName {
+    _display:none;
+    font-size:16px;
+    font-weight:300;
+    border-bottom:1px solid #1f1f1f;
+    padding-bottom:7px;
+    color:#1f1f1f;
+    font-style:italic;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-bottom:5px;
+}
+
+.fieldName input, .fieldName textarea{
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin:0;
+
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-style:italic;
+    font-size:16px;
+
+    background:transparent;
+    display:block;
+    width:100%;
+    resize: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.hasName .text {
+    /*margin-top:5px;*/
+}
+
+.text .value {
+    _overflow-wrap: break-word;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    _padding-bottom:6px;
+    _line-height:normal;
+    white-space: pre-wrap;
+}
+
+.text .textarea {
+    border: 0 none white;
+    outline: none;
+    padding: 0;
+    font: inherit;
+    background:transparent;
+    display:block;
+    
+    width:100%;
+    _width:256px;
+
+    overflow:hidden;
+    resize: none;
+    _line-height:normal;
+}
+
+.stopwatch .block  {
+    border-radius:2px;
+    border-top:1px solid rgba(128, 128, 128, 0.50);
+
+    font-weight:100;
+    background-color:rgba(245, 245, 245, 0.5);
+}
+
+.hasName .stopwatch .block {
+    border-top:none;
+}
+
+/*
+.stopwatch .value {
+    text-align: center;
+    font-size: 40px;
+    line-height: 55px;
+}
+*/
+
+.stopwatch .commands, .numeric.hasControls .commands {
+    background-color:#F5F5F5;
+    background-color:rgba(245, 245, 245, 0.7);
+    border-top: 1px solid rgba(128, 128, 128, 0.50);
+    border:1px solid rgba(128, 128, 128, 0.50);
+    line-height:30px;
+    text-align:center;
+    color:#666;
+}
+
+.stopwatch .commands .left, .numeric.hasControls .commands .left {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display:inline-block;
+    width:50%;
+    border-right: 1px solid rgba(128, 128, 128, 0.50);
+}
+
+.stopwatch .commands .right, .numeric.hasControls .commands .right {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+}
+
+.numeric.hasControls .block  {
+    border-radius:2px;
+    border-top:1px solid rgba(128, 128, 128, 0.50);
+
+    background-color:rgba(245, 245, 245, 0.5);
+    padding:1px 7px;
+}
+
+.hasName .numeric.hasControls .block {
+    border-top:none;
+    margin-top:7px;
+}
+
+.stopwatch .value, .numeric .value {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin:0;
+
+    font-family: 'Roboto Slab';
+    font-weight: 200;
+    font-size:18px;
+
+    font-size: 40px;
+
+    background:transparent;
+    display:block;
+    width:100%;
+    resize: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    color:#000;
+    text-align:left;
+}
+
+.numeric.hasControls .value {
+    text-align:center;
+}
+
+.stopwatch .value {
+    text-align:center;
+}
+
+.tracker {
+}
+
+.tracker .header {
+
+    border-top:1px dashed;
+    border-bottom:1px dashed;
+
+    background-color:rgba(0, 0, 0, 0.02);
+    border-color:rgba(0, 0, 0, 0.25);
+
+    font-family:'Roboto Slab';
+    font-weight:200;
+
+    font-size:21px;
+    padding:4px;
+    color:black;
+
+    _box-shadow: inset 0 10px 20px -10px rgba(0,0,0,0.25);
+}
+
+.tracker .header i {
+    color:rgba(0, 0, 0, 0.3);
+}
+
+.tracker .header .name{
+    margin:2px 0 2px 3px;
+    display:inline-block;
+    padding-top:4px;
+    padding-bottom:3px;
+}
+
+.wrapper{
+    padding:7px;
+}
+
+.wrapper.group {
+    padding-top:15px;
+}
+
+.itemgroup {
+    border:1px solid transparent;
+    border-radius:2px;
+}
+
+.wrapper .itemgroup{
+    padding:0 7px;
+}
+
+.wrapper.group > .itemgroup{
+    border:1px dashed #333;
+    padding:0;
+    padding-top:10px;
+    padding-bottom:5px;
+}
+
+.wrapper.hasoptions > .itemgroup {
+    border:1px solid rgba(0, 0, 0, 0.20);
+    padding-top:5px;
+}
+
+.wrapper .itemgroup .itemgroup{
+    border:none;
+    padding-left:0;
+    padding-right:0;
+}
+
+.wrapper .itemoptions{
+    background-color:rgba(160, 160, 160, 0.15);
+    margin:5px -7px 0 -7px;
+    border-top:1px solid rgba(0, 0, 0, 0.20);
+    text-align:left;
+}
+
+.wrapper .itemoptions.blank {
+    border:none;
+    background-color:transparent;
+}
+
+.wrapper.group .itemoptions{
+    margin:10px 0 -10px 0;
+}
+
+.wrapper .itemoptions i {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer !important;
+    color:#444;
+}
+
+.contextindicator{
+    position:absolute;
+    bottom:2px;
+    left:9px;
+    height:5px;
+    width:21px;
+    text-align:center;
+    line-height:5px;
+    font-size:5px;
+}
+
+.contextindicator .item{
+    background-color:#e7e7e7;
+    border-radius:5px;
+    width:5px;
+    height:5px;
+    margin-right:2px;
+    display:inline-block;
+}
+
+.contextindicator .item.active {
+
+}
+
+.timestamp {
+    _background-color: #F5F5F5;
+    _background-color: rgba(160, 160, 160, 0.15);
+    _border-top: 1px solid #d8d8d8;
+    _border-top: 1px solid rgba(0, 0, 0, 0.20);
+
+    padding:7px 15px;
+
+    padding-top:0;
+
+    font-size:14px;
+    font-weight:300;
+
+    text-align:right;
+    color:#444;
+}
+
+.notelist {
+    _background-color: rgba(245, 245, 245, 0.5);
+    _border: 1px solid rgba(128, 128, 128, 0.50);
+    _border-radius: 2px;
+}
+
+.notelistitem {
+    padding:2px 0px 2px 25px;
+    position:relative;
+    margin:5px 0;
+}
+
+.notelistitem .litext {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin:0;
+
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-size:18px;
+
+    background:transparent;
+    display:block;
+    width:100%;
+    resize: none;
+
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    white-space:normal;
+
+    color:#000;
+}
+
+.notelistitem textarea.litext {
+    width:90%;
+}
+
+.notelistitem .licheck {
+    font-size:17px;
+    position:absolute;
+    top:3px;
+    left:0px;
+    opacity:0.9;
+}
+
+.notelistitem .lihandle {
+    position:absolute;
+    font-size:10px;
+    top:9px;
+    left:0px;
+    color:#666;
+    display:none;
+    cursor:ns-resize;
+}
+
+.notelistitem .liremove {
+    position:absolute;
+    font-size: 13px;
+    top: 7px;
+    right: 0px;
+    color:#666;
+    display:none;
+}
+
+.notelistitem .lichoice {
+    margin-top:3px;
+
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius: 2px;
+
+}
+
+.newlistitem {
+    color:#666;
+    padding: 4px 0 3px 0px;
+}
+
+.hascontrols .newlistitem {
+    padding:6px 0 5px 14px;
+}
+
+.hascontrols .notelistitem {
+    padding:2px 2px 2px 40px;
+}
+.hascontrols .notelistitem .licheck{
+    left:14px;
+}
+
+.hascontrols .notelistitem:hover .lihandle{
+    display:block;
+}
+
+.hascontrols .notelistitem:hover .liremove{
+    display:block;
+}
+
+.item-list-checked .litext{
+    opacity:0.5;
+    text-decoration:line-through;
+}
+
+.item-combo-checked .litext{
+}
+
+.item-combo-unchecked .litext{
+    opacity:0.5;
+}
+
+.combo {
+    margin-top:7px;
+    padding: 4px;
+    padding-right: 25px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: rgba(245, 245, 245, 0.5);
+    border: 1px solid rgba(128, 128, 128, 0.50);
+    border-radius: 2px;
+}
+
+.edit .combo {
+    cursor:pointer;
+}
+
+.combo-content {
+}
+
+.combo-indicator {
+    position:absolute;
+    right:3px;
+    top:3px;
+    color:#666;
+}
+
+.linkitem {
+    text-align:center;
+}
+
+.linkitem .linkLink, .linkitem .linkTitle {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin:0;
+
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-size:18px;
+
+    background:transparent;
+    display:block;
+    width:100%;
+    resize: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    color:#000;
+    text-align:left;
+}
+
+.linkitem a {
+    font-family: 'Roboto Slab';
+    font-weight: 300;
+    font-size:18px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    color:#000;
+}
+
+.linkitem .linkLink {
+    text-decoration:underline;
+}

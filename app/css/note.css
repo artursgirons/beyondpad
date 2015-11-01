@@ -1,0 +1,419 @@
+﻿#notesblock {
+    /*margin-left:auto;
+    margin-right:auto;*/
+
+    position:relative;
+
+    /*position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    overflow:auto;*/
+}
+
+.note {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    position: absolute;
+
+    width: 300px;
+
+    color: #666;
+    background-color: #ffffff;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+
+    border-radius: 2px;
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: #d8d8d8;
+}
+
+.boardlistwrapper .note {
+    position:relative;
+}
+
+
+
+
+
+
+.note.view .nsm {
+    height:0;
+    display:block;
+    position:relative;
+    z-index:10;
+}
+
+.nsm .nsm_main {
+    position:absolute;
+    top:-33px;
+    bottom:0;
+    left:0;
+    width:18px;
+}
+
+.nsm .nsm_main .nsm_handle {
+    display:none;
+    overflow:hidden;
+    position:relative;
+    height:100%;
+    width:100%;
+}
+
+.nsm .nsm_main .nsm_handle i {
+    color:rgba(90, 90, 90, 0.80);
+    font-size:18px;
+    position:absolute;
+    top: 5px;
+    left: -5px;
+}
+
+.nsm .nsm_main .nsm_content {
+    _display:none;
+    
+    position:absolute;
+    
+    bottom:0;
+    top:0;
+    left:0;
+    width:0;
+    
+    background-color: rgba(245, 245, 245, 0.95);
+
+    overflow:hidden;
+    white-space:nowrap;
+
+    -webkit-transition: all ease-in-out 0.1s 0.5s;
+    -moz-transition: all ease-in-out 0.1s 0.5s;
+    -ms-transition: all ease-in-out 0.1s 0.5s;
+    -o-transition: all ease-in-out 0.1s 0.5s;
+    transition: all ease-in-out 0.1s 0.5s;
+}
+
+.note.view:hover .nsm .nsm_main .nsm_handle {
+    display:block;
+}
+
+.nsm .nsm_main:hover {
+}
+
+.nsm .nsm_main:hover .nsm_handle{
+    display:none !important;
+}
+
+.nsm .nsm_main:hover .nsm_content{
+    display:block;
+    width:298px;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+/*asdasdasd*/
+
+
+
+
+.note.view .nsmb {
+    height:0;
+    display:block;
+    position:relative;
+    z-index:10;
+}
+
+.nsmb .nsm_main {
+    position:absolute;
+    top:-7px;
+    bottom:-7px;
+    left:0;
+    right:0;
+    _background-color:red;
+}
+
+.nsmb .nsm_main .nsm_handle {
+    display:none;
+    height:7px;
+    color:rgba(90, 90, 90, 0.80);
+    text-align:center;
+    font-size:18px;
+    overflow:hidden;
+    position:absolute;
+    bottom:7px;
+    left:0;
+    right:0;
+}
+
+.nsmb .nsm_main .nsm_handle i {
+    position:relative;
+    top:-9px;
+}
+
+.nsmb .nsm_main .nsm_content {
+    //display:none;
+    position:absolute;
+    bottom:7px;
+    top:7px;
+    left:0;
+    right:0;
+    overflow:hidden;
+
+    -webkit-transition: all ease-in-out 0.1s 0.5s;
+    -moz-transition: all ease-in-out 0.1s 0.5s;
+    -ms-transition: all ease-in-out 0.1s 0.5s;
+    -o-transition: all ease-in-out 0.1s 0.5s;
+    transition: all ease-in-out 0.1s 0.5s;
+}
+
+.note.view:hover .nsmb .nsm_main .nsm_handle {
+    display:block;
+}
+
+.nsmb .nsm_main:hover {
+}
+
+.nsmb .nsm_main:hover .nsm_handle{
+    display:none !important;
+}
+
+.nsmb .nsm_main:hover .nsm_content {
+    top: -26px;
+    display: block;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.nsm_cont_sub {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    overflow:hidden;
+    white-space:nowrap;
+    background-color: rgba(235, 235, 235, 0.5);
+}
+
+.nsm_cont_sub i:hover {
+    border-radius:1px !important;
+    background-color: rgba(235, 235, 235, 0.5) !important;
+}
+
+.note.selected .nsmb {
+    display:none;
+}
+
+
+
+
+.note.view{
+    cursor:default;
+}
+
+.note .container {
+    padding: 0;
+    background-color:inherit;
+}
+
+.note .container .wrapper {
+    _padding: 7px;
+    background-color: inherit;
+    position: relative;
+    color:#000000;
+}
+
+.note.edit {
+    -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+    box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.3);
+}
+
+
+.note.edit .container .wrapper .handle{
+    display:none;
+    cursor:ns-resize;
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:15px;
+    overflow:hidden;
+    color:rgba(120, 120, 120, 0.35);
+    color:#666;
+}
+
+.note.edit .container .wrapper .more{
+    display:none;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width:15px;
+    _overflow:hidden;
+    color:rgba(120, 120, 120, 0.35);
+    color:#666;
+
+    line-height:15px;
+    text-align:center;
+    font-size:17px;
+}
+
+.note.edit .container .wrapper .more i {
+    display:inline-block;
+    position:absolute;
+    bottom:0;
+    padding:0;
+    font-size:17px;
+    right:0;
+    cursor:pointer;
+
+    padding:0px;
+    margin:0px;
+
+    bottom: 4px;
+    right: -3px;
+
+    z-index:100;
+}
+
+.note.edit .container .wrapper .handle i {
+    position:absolute;
+    top:50%;
+    margin-top:-5px;
+    left:-0px;
+    font-size:10px;
+    padding:0;
+}
+
+.note.edit .container .wrapper:hover {
+    background-color:rgba(120, 120, 120, 0.1);
+}
+
+.note.edit .container .wrapper:hover .handle {
+    display:block;
+}
+
+.note.edit .container .wrapper:hover .more {
+    display:block;
+}
+
+.notefooter{
+    position:relative;
+    background-color:#F5F5F5;
+    padding:5px 5px 5px 5px;
+    font-size:26px;
+    border-top:1px solid #d8d8d8;
+}
+
+.edit .notefooter{
+    padding-right:36px;
+}
+
+.notefooter .enter {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:30px;
+    right:0;
+    border-left:1px solid #d8d8d8;
+    background-color:rgba(255, 255, 255, 0.60);
+    background-color:#F5F5F5;
+    cursor:pointer;
+}
+
+.notefooter .enter:hover {
+    background-color:rgba(120, 120, 120, 0.1);
+}
+
+.notefooter .enter i{
+    position:absolute;
+    top:50%;
+    left:6px;
+    margin-top:-7px;
+    font-size:14px;
+}
+
+.opaque .note {
+    opacity:0.25;
+}
+
+.note.edit.saved {
+    opacity: 1;
+}
+
+.note.active {
+    _box-shadow: 0px 0px 0px 5px #d8d8d8;
+
+    -webkit-box-shadow: 0px 0px 0px 5px #d8d8d8;
+    -moz-box-shadow: 0px 0px 0px 5px #d8d8d8;
+    box-shadow: 0px 0px 0px 5px #d8d8d8;
+
+    z-index:100;
+}
+
+.note.selected {
+    z-index:20;
+}
+
+.note .selectholder {
+    display:none;
+}
+.note.selected .selectholder {
+    display: block;
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+
+    background-color: rgba(48, 126, 199, 0.4);
+    _background-color: rgba(48, 126, 199, 0.15);
+
+    border-radius: 2px;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.note .selectholder i {
+    position:absolute;
+    left:50%;
+    top:50%;
+    font-size:30px;
+    line-height:40px;
+
+    height:40px;
+    width:40px;
+
+    margin-top:-23px;
+    margin-left:-23px;
+
+    color:#FFF;
+
+    border:5px solid #fff;
+    background-color:#307EC7;
+
+    border-radius:50px;
+}
+
+.savetext {
+    position: absolute;
+    bottom: 1px;
+    font-size: 10px;
+    font-family: sans-serif, arial;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

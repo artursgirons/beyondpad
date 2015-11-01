@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2f9ea3e4-e538-4d07-8510-16754e03fe03}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartupFile>server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <NodejsPort>1553</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+    <LaunchUrl>http://vs.beyondpad.com:1553/app</LaunchUrl>
+    <Environment>NODE_ENV=dev</Environment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Compile Include="api\controllers\account.js" />
+    <Compile Include="api\controllers\auth.js" />
+    <Compile Include="api\controllers\board.js" />
+    <Compile Include="api\controllers\upgrade.js" />
+    <Compile Include="api\controllers\sync.js" />
+    <Compile Include="api\controllers\boards.js" />
+    <Compile Include="api\controllers\note.js" />
+    <Compile Include="api\controllers\notes.js" />
+    <Compile Include="api\models\account.js" />
+    <Compile Include="api\models\boards.js" />
+    <Compile Include="api\models\demodata.js" />
+    <Compile Include="api\models\notes.js" />
+    <Compile Include="api\routers\account.js" />
+    <Compile Include="api\routers\auth.js" />
+    <Compile Include="api\routers\upgrade.js" />
+    <Compile Include="api\routers\board.js" />
+    <Compile Include="api\routers\boards.js" />
+    <Compile Include="api\routers\note.js" />
+    <Compile Include="api\routers\sync.js" />
+    <Compile Include="api\routers\notes.js" />
+    <Content Include="app\img\home\1200x630.png" />
+    <Content Include="app\img\home\googleplay.png" />
+    <Content Include="app\img\home\googleplay_soon.png" />
+    <Content Include="app\img\home\windowsstore.png" />
+    <Content Include="app\img\home\windowsstore_soon.png" />
+    <Content Include="app\img\s_pen_digitizer.png" />
+    <Content Include="app\js\app\collections\boards.js" />
+    <Content Include="app\js\app\collections\lists.js" />
+    <Content Include="app\js\app\collections\notes.js" />
+    <Content Include="app\js\app\collections\tags.js" />
+    <Content Include="app\js\app\data\dataadapter.generic.js" />
+    <Content Include="app\js\app\data\dataadapter.local.js" />
+    <Content Include="app\js\app\data\dataadapter.remote.js" />
+    <Content Include="app\js\app\main.js" />
+    <Content Include="app\js\app\misc\analytics.js" />
+    <Content Include="app\js\app\misc\config.js" />
+    <Content Include="app\js\app\misc\demo.js" />
+    <Content Include="app\js\app\misc\fonts.js" />
+    <Content Include="app\js\app\misc\globals.js" />
+    <Content Include="app\js\app\misc\lib.js" />
+    <Content Include="app\js\app\models\account.js" />
+    <Content Include="app\js\app\models\board.js" />
+    <Content Include="app\js\app\models\dataModel.js" />
+    <Content Include="app\js\app\models\list.js" />
+    <Content Include="app\js\app\models\note.js" />
+    <Content Include="app\js\app\models\state.js" />
+    <Content Include="app\js\app\models\tag.js" />
+    <Content Include="app\js\app\routers\router.js" />
+    <Content Include="app\js\app\signin.js" />
+    <Content Include="app\js\app\views\components\button.js" />
+    <Content Include="app\js\app\views\components\checkbox.js" />
+    <Content Include="app\js\app\views\components\group.js" />
+    <Content Include="app\js\app\views\components\tag.js" />
+    <Content Include="app\js\app\views\components\tagbox.js" />
+    <Content Include="app\js\app\views\components\taglookup.js" />
+    <Content Include="app\js\app\views\content\boards.js" />
+    <Content Include="app\js\app\views\content\calendar.js" />
+    <Content Include="app\js\app\views\content\component\board.js" />
+    <Content Include="app\js\app\views\content\component\boards.js" />
+    <Content Include="app\js\app\views\content\component\choicetags.js" />
+    <Content Include="app\js\app\views\content\component\graph.js" />
+    <Content Include="app\js\app\views\content\component\list.js" />
+    <Content Include="app\js\app\views\content\component\listexcludetags.js" />
+    <Content Include="app\js\app\views\content\component\listnotes.js" />
+    <Content Include="app\js\app\views\content\component\lists.js" />
+    <Content Include="app\js\app\views\content\component\listtags.js" />
+    <Content Include="app\js\app\views\content\component\loading.js" />
+    <Content Include="app\js\app\views\content\component\notes.js" />
+    <Content Include="app\js\app\views\content\component\notfound.js" />
+    <Content Include="app\js\app\views\content\component\taglinktags.js" />
+    <Content Include="app\js\app\views\content\component\uploadtags.js" />
+    <Content Include="app\js\app\views\content\feedback.js" />
+    <Content Include="app\js\app\views\content\insights.js" />
+    <Content Include="app\js\app\views\content\logout.js" />
+    <Content Include="app\js\app\views\content\map.js" />
+    <Content Include="app\js\app\views\content\notes.js" />
+    <Content Include="app\js\app\views\content\notfound.js" />
+    <Content Include="app\js\app\views\content\settings.js" />
+    <Content Include="app\js\app\views\content\tags.js" />
+    <Content Include="app\js\app\views\content\trackers.js" />
+    <Content Include="app\js\app\views\content\upgrade.js" />
+    <Content Include="app\js\app\views\content\upload.js" />
+    <Content Include="app\js\app\views\context\components\colormenu.js" />
+    <Content Include="app\js\app\views\context\components\retagitem.bak.js" />
+    <Content Include="app\js\app\views\context\components\retagitem.js" />
+    <Content Include="app\js\app\views\context\components\retagmenu.js" />
+    <Content Include="app\js\app\views\context\components\statusmenu.js" />
+    <Content Include="app\js\app\views\context\components\tagmenu.js" />
+    <Content Include="app\js\app\views\context\components\textmenu.js" />
+    <Content Include="app\js\app\views\context\contextbar.js" />
+    <Content Include="app\js\app\views\context\contextmenu.js" />
+    <Content Include="app\js\app\views\items\body.edit.js" />
+    <Content Include="app\js\app\views\items\body.view.js" />
+    <Content Include="app\js\app\views\items\choice.edit.js" />
+    <Content Include="app\js\app\views\items\choice.view.js" />
+    <Content Include="app\js\app\views\items\combo.edit.js" />
+    <Content Include="app\js\app\views\items\combo.view.js" />
+    <Content Include="app\js\app\views\items\container.edit.js" />
+    <Content Include="app\js\app\views\items\container.view.js" />
+    <Content Include="app\js\app\views\items\contextswitch.edit.js" />
+    <Content Include="app\js\app\views\items\contextswitch.view.js" />
+    <Content Include="app\js\app\views\items\countdown.edit.js" />
+    <Content Include="app\js\app\views\items\countdown.view.js" />
+    <Content Include="app\js\app\views\items\group.edit.js" />
+    <Content Include="app\js\app\views\items\group.view.js" />
+    <Content Include="app\js\app\views\items\link.edit.js" />
+    <Content Include="app\js\app\views\items\link.view.js" />
+    <Content Include="app\js\app\views\items\list.edit.js" />
+    <Content Include="app\js\app\views\items\list.view.js" />
+    <Content Include="app\js\app\views\items\listitem.edit.js" />
+    <Content Include="app\js\app\views\items\listitem.view.js" />
+    <Content Include="app\js\app\views\items\numeric.edit.js" />
+    <Content Include="app\js\app\views\items\numeric.view.js" />
+    <Content Include="app\js\app\views\items\stopwatch.edit.js" />
+    <Content Include="app\js\app\views\items\stopwatch.view.js" />
+    <Content Include="app\js\app\views\items\tag.edit.js" />
+    <Content Include="app\js\app\views\items\tag.view.js" />
+    <Content Include="app\js\app\views\items\tagbody.edit.js" />
+    <Content Include="app\js\app\views\items\tagbody.view.js" />
+    <Content Include="app\js\app\views\items\tags.edit.js" />
+    <Content Include="app\js\app\views\items\tags.view.js" />
+    <Content Include="app\js\app\views\items\text.edit.js" />
+    <Content Include="app\js\app\views\items\text.view.js" />
+    <Content Include="app\js\app\views\items\timestamp.edit.js" />
+    <Content Include="app\js\app\views\items\timestamp.view.js" />
+    <Content Include="app\js\app\views\items\wrapper.edit.js" />
+    <Content Include="app\js\app\views\items\wrapper.view.js" />
+    <Content Include="app\js\app\views\layout\content.js" />
+    <Content Include="app\js\app\views\layout\contextmenu.js" />
+    <Content Include="app\js\app\views\layout\header.js" />
+    <Content Include="app\js\app\views\layout\main.js" />
+    <Content Include="app\js\app\views\layout\navigation.js" />
+    <Content Include="app\js\app\views\layout\sidepane.js" />
+    <Content Include="app\js\app\views\note\edit.js" />
+    <Content Include="app\js\app\views\note\main.js" />
+    <Content Include="app\js\app\views\note\menu\base.js" />
+    <Content Include="app\js\app\views\note\menu\note.js" />
+    <Content Include="app\js\app\views\note\menu\quick.js" />
+    <Content Include="app\js\app\views\note\menu\tag.js" />
+    <Content Include="app\js\app\views\note\menu\tracker.js" />
+    <Content Include="app\js\app\views\note\options\base.js" />
+    <Content Include="app\js\app\views\note\options\components\extratags.js" />
+    <Content Include="app\js\app\views\note\options\note.js" />
+    <Content Include="app\js\app\views\note\options\tag.js" />
+    <Content Include="app\js\app\views\note\options\tracker.js" />
+    <Content Include="app\js\app\views\note\view.js" />
+    <Content Include="app\js\app\views\sidepane\boards.js" />
+    <Content Include="app\js\app\views\sidepane\calendar.js" />
+    <Content Include="app\js\app\views\sidepane\component\checkitem.js" />
+    <Content Include="app\js\app\views\sidepane\component\item.js" />
+    <Content Include="app\js\app\views\sidepane\component\tags.js" />
+    <Content Include="app\js\app\views\sidepane\component\trackers.js" />
+    <Content Include="app\js\app\views\sidepane\component\types.js" />
+    <Content Include="app\js\app\views\sidepane\insights.js" />
+    <Content Include="app\js\app\views\sidepane\map.js" />
+    <Content Include="app\js\app\views\sidepane\notes.js" />
+    <Content Include="app\js\app\views\sidepane\notfound.js" />
+    <Content Include="app\js\app\views\sidepane\search.js" />
+    <Content Include="app\js\app\views\sidepane\tags.js" />
+    <Content Include="app\js\app\views\sidepane\trackers.js" />
+    <Content Include="app\js\lib\backbone.js" />
+    <Content Include="app\js\lib\backbone.min.js" />
+    <Content Include="app\js\lib\classnames.js" />
+    <Content Include="app\js\lib\cytoscape.js" />
+    <Content Include="app\js\lib\cytoscape.min.js" />
+    <Content Include="app\js\lib\jquery-ui.js" />
+    <Content Include="app\js\lib\jquery.js" />
+    <Content Include="app\js\lib\jquery.min.js" />
+    <Content Include="app\js\lib\jquery.scrollintoview.js" />
+    <Content Include="app\js\lib\json2.js" />
+    <Content Include="app\js\lib\lodash.js" />
+    <Content Include="app\js\lib\lodash.min.js" />
+    <Content Include="app\js\lib\react.js" />
+    <Content Include="app\js\lib\react.min.js" />
+    <Content Include="app\js\lib\springy.js" />
+    <Content Include="app\js\lib\webfontloader.js" />
+    <Content Include="app\js\build\app.js" />
+    <Content Include="app\js\build\app.min.js" />
+    <Content Include="app\js\build\demo.js" />
+    <Content Include="app\js\build\demo.min.js" />
+    <Content Include="app\js\build\lib.js" />
+    <Content Include="app\js\build\lib.min.js" />
+    <Content Include="app\js\lib\device.js" />
+    <Content Include="app\js\lib\device.min.js" />
+    <Content Include="app\js\app\misc\uwa.js" />
+    <Compile Include="gulpfile.js" />
+    <Compile Include="lib.js" />
+    <Compile Include="setup\database.js" />
+    <Compile Include="setup\router.js" />
+    <Compile Include="setup\session.js" />
+    <Compile Include="setup\setup.js" />
+    <Content Include="app\app_entry_point.dev.html" />
+    <Content Include="app\app_entry_point.prod.html" />
+    <Content Include="app\css\app.css.bundle" />
+    <Content Include="app\css\board.css" />
+    <Content Include="app\css\build\app.css" />
+    <Content Include="app\css\build\app.min.css" />
+    <Content Include="app\css\color.css" />
+    <Content Include="app\css\contextmenu.css" />
+    <Content Include="app\css\header.css" />
+    <Content Include="app\css\home.css" />
+    <Content Include="app\css\items.css" />
+    <Content Include="app\css\layout.css" />
+    <Content Include="app\css\list.css" />
+    <Content Include="app\css\misc.css" />
+    <Content Include="app\css\navigation.css" />
+    <Content Include="app\css\note.css" />
+    <Content Include="app\css\picker.css" />
+    <Content Include="app\css\reset.css" />
+    <Content Include="app\css\root.css" />
+    <Content Include="app\css\settings.css" />
+    <Content Include="app\css\sidepane.css" />
+    <Content Include="app\css\signin.css" />
+    <Content Include="app\css\tags.css" />
+    <Content Include="app\demo_entry_point.dev.html" />
+    <Content Include="app\demo_entry_point.prod.html" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\home_entry_point.html" />
+    <Content Include="app\icons\config.json" />
+    <Content Include="app\icons\css\animation.css" />
+    <Content Include="app\icons\css\beyondpad-codes.css" />
+    <Content Include="app\icons\css\beyondpad-embedded.css" />
+    <Content Include="app\icons\css\beyondpad-ie7-codes.css" />
+    <Content Include="app\icons\css\beyondpad-ie7.css" />
+    <Content Include="app\icons\css\beyondpad.css" />
+    <Content Include="app\icons\demo.html" />
+    <Content Include="app\icons\font\beyondpad.eot" />
+    <Content Include="app\icons\font\beyondpad.svg" />
+    <Content Include="app\icons\font\beyondpad.ttf" />
+    <Content Include="app\icons\font\beyondpad.woff" />
+    <Content Include="app\icons\LICENSE.txt" />
+    <Content Include="app\icons\README.txt" />
+    <Content Include="app\icon_128.png" />
+    <Content Include="app\img\demo\boards.png" />
+    <Content Include="app\img\demo\chart.png" />
+    <Content Include="app\img\demo\choice.png" />
+    <Content Include="app\img\demo\contextbar.png" />
+    <Content Include="app\img\demo\graph.png" />
+    <Content Include="app\img\demo\itemtypes.png" />
+    <Content Include="app\img\demo\linkedtags.png" />
+    <Content Include="app\img\demo\listoptions.png" />
+    <Content Include="app\img\demo\lists.png" />
+    <Content Include="app\img\demo\logo.png" />
+    <Content Include="app\img\demo\map.png" />
+    <Content Include="app\img\demo\multiselect.png" />
+    <Content Include="app\img\demo\navigation.png" />
+    <Content Include="app\img\demo\simplenote.png" />
+    <Content Include="app\img\demo\status.png" />
+    <Content Include="app\img\demo\trackers.png" />
+    <Content Include="app\img\demo\tricksandtips.png" />
+    <Content Include="app\img\demo\types.png" />
+    <Content Include="app\img\home\ergonotes.png" />
+    <Content Include="app\img\home\ergonotes_beyondpad.png" />
+    <Content Include="app\img\home\header_bg.png" />
+    <Content Include="app\img\home\icon_70.png" />
+    <Content Include="app\img\home\laptop.png" />
+    <Content Include="app\img\home\logo.png" />
+    <Content Include="app\img\home\marketplace.png" />
+    <Content Include="app\img\home\tracker.gif" />
+    <Content Include="app\img\home\webstore.png" />
+    <Content Include="app\img\logo_header.png" />
+    <Content Include="app\img\logo_huge.png" />
+    <Content Include="app\img\logo_text_350.png" />
+    <Content Include="app\js\app.js.bundle" />
+    <Content Include="app\js\demo.js.bundle" />
+    <Content Include="app\js\lib.js.bundle" />
+    <Content Include="app\manifest.json" />
+    <Content Include="app\manifest.webapp" />
+    <Content Include="app\reset_entry_point.html" />
+    <Content Include="app\robots.txt" />
+    <Content Include="app\signin_entry_point.html" />
+    <Content Include="package.json" />
+    <Compile Include="app.js" />
+    <Compile Include="config.js" />
+    <Compile Include="server.js" />
+    <Content Include="tools\icomoon2android.html" />
+    <Content Include="tools\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="api\" />
+    <Folder Include="api\controllers\" />
+    <Folder Include="api\models\" />
+    <Folder Include="api\routers\" />
+    <Folder Include="app\" />
+    <Folder Include="app\css\" />
+    <Folder Include="app\css\build\" />
+    <Folder Include="app\icons\" />
+    <Folder Include="app\icons\css\" />
+    <Folder Include="app\icons\font\" />
+    <Folder Include="app\img\" />
+    <Folder Include="app\img\demo\" />
+    <Folder Include="app\img\home\" />
+    <Folder Include="app\js\" />
+    <Folder Include="app\js\app\" />
+    <Folder Include="app\js\app\collections\" />
+    <Folder Include="app\js\app\data\" />
+    <Folder Include="app\js\app\misc\" />
+    <Folder Include="app\js\app\models\" />
+    <Folder Include="app\js\app\routers\" />
+    <Folder Include="app\js\app\views\" />
+    <Folder Include="app\js\app\views\components\" />
+    <Folder Include="app\js\app\views\content\" />
+    <Folder Include="app\js\app\views\content\component\" />
+    <Folder Include="app\js\app\views\context\" />
+    <Folder Include="app\js\app\views\context\components\" />
+    <Folder Include="app\js\app\views\items\" />
+    <Folder Include="app\js\app\views\layout\" />
+    <Folder Include="app\js\app\views\note\" />
+    <Folder Include="app\js\app\views\note\menu\" />
+    <Folder Include="app\js\app\views\note\options\" />
+    <Folder Include="app\js\app\views\note\options\components\" />
+    <Folder Include="app\js\app\views\sidepane\" />
+    <Folder Include="app\js\app\views\sidepane\component\" />
+    <Folder Include="app\js\build\" />
+    <Folder Include="app\js\lib\" />
+    <Folder Include="setup\" />
+    <Folder Include="tools\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

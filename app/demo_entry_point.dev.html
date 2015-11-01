@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Beyondpad</title>
+
+    <meta charset="utf-8" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="128x128" href="/icon_128.png">
+
+    <!-- build:css css/build/app.css -->
+    <!-- ------------------- Initial Style ------------------- -->
+
+    <link href="/icons/css/beyondpad.css" rel="stylesheet" />
+
+    <!-- ------------------- Style ------------------- -->
+
+    <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="/css/header.css" rel="stylesheet" />
+    <link href="/css/contextmenu.css" rel="stylesheet" />
+    <link href="/css/navigation.css" rel="stylesheet" />
+    <link href="/css/sidepane.css" rel="stylesheet" />
+    <link href="/css/color.css" rel="stylesheet" />
+    <link href="/css/root.css" rel="stylesheet" />
+    <link href="/css/tags.css" rel="stylesheet" />
+    <link href="/css/picker.css" rel="stylesheet" />
+    <link href="/css/note.css" rel="stylesheet" />
+    <link href="/css/list.css" rel="stylesheet" />
+    <link href="/css/board.css" rel="stylesheet" />
+    <link href="/css/items.css" rel="stylesheet" />
+    <link href="/css/misc.css" rel="stylesheet" />
+    <link href="/css/settings.css" rel="stylesheet" />
+
+    <!-- endbuild -->
+    <!-- build:js js/build/lib.js -->
+    <!-- ------------------- Libraries ------------------- -->
+
+    <script src="/js/lib/webfontloader.js"></script>
+    <script src="/js/lib/jquery.js"></script>
+    <script src="/js/lib/jquery-ui.js"></script>
+    <script src="/js/lib/jquery.scrollintoview.js"></script>
+    <script src="/js/lib/lodash.js"></script>
+    <script src="/js/lib/backbone.js"></script>
+    <script src="/js/lib/react.js"></script>
+    <script src="/js/lib/classnames.js"></script>
+    <script src="/js/lib/json2.js"></script>
+    <script src="/js/lib/cytoscape.js"></script>
+    <script src="/js/lib/springy.js"></script>
+
+    <!-- endbuild -->
+    <!-- build:js js/build/app.js -->
+    <!-- ------------------ANALYTICS ------------------ -->
+
+    <script src="/js/app/misc/analytics.js"></script>
+
+    <!-- ------------------- Demo data ------------------- -->
+
+    <script src="/js/app/misc/demo.js"></script>
+
+    <!-- ------------------- Global ------------------- -->
+
+    <script src="/js/app/misc/globals.js"></script>
+    <script src="/js/app/misc/fonts.js"></script>
+    <script src="/js/app/misc/config.js"></script>
+    <script src="/js/app/misc/lib.js"></script>
+
+    <!-- ------------------- Data ------------------- -->
+
+    <script src="/js/app/models/account.js"></script>
+    <script src="/js/app/models/board.js"></script>
+    <script src="/js/app/models/list.js"></script>
+    <script src="/js/app/models/state.js"></script>
+    <script src="/js/app/models/note.js"></script>
+    <script src="/js/app/models/tag.js"></script>
+    <script src="/js/app/models/dataModel.js"></script>
+
+    <script src="/js/app/collections/boards.js"></script>
+    <script src="/js/app/collections/lists.js"></script>
+    <script src="/js/app/collections/notes.js"></script>
+    <script src="/js/app/collections/tags.js"></script>
+
+    <script src="/js/app/data/dataadapter.generic.js"></script>
+    <script src="/js/app/data/dataadapter.local.js"></script>
+    <script src="/js/app/data/dataadapter.remote.js"></script>
+
+    <!-- ------------------- Views ------------------- -->
+
+    <script src="/js/app/views/layout/content.js"></script>
+    <script src="/js/app/views/layout/contextmenu.js"></script>
+    <script src="/js/app/views/layout/header.js"></script>
+    <script src="/js/app/views/layout/main.js"></script>
+    <script src="/js/app/views/layout/navigation.js"></script>
+    <script src="/js/app/views/layout/sidepane.js"></script>
+
+    <script src="/js/app/views/content/boards.js"></script>
+    <script src="/js/app/views/content/calendar.js"></script>
+    <script src="/js/app/views/content/insights.js"></script>
+    <script src="/js/app/views/content/map.js"></script>
+    <script src="/js/app/views/content/notes.js"></script>
+    <script src="/js/app/views/content/trackers.js"></script>
+    <script src="/js/app/views/content/settings.js"></script>
+    <script src="/js/app/views/content/tags.js"></script>
+    <script src="/js/app/views/content/logout.js"></script>
+    <script src="/js/app/views/content/feedback.js"></script>
+    <script src="/js/app/views/content/upgrade.js"></script>
+    <script src="/js/app/views/content/notfound.js"></script>
+    <script src="/js/app/views/content/upload.js"></script>
+
+    <script src="/js/app/views/content/component/choicetags.js"></script>
+    <script src="/js/app/views/content/component/board.js"></script>
+    <script src="/js/app/views/content/component/boards.js"></script>
+    <script src="/js/app/views/content/component/graph.js"></script>
+    <script src="/js/app/views/content/component/list.js"></script>
+    <script src="/js/app/views/content/component/listnotes.js"></script>
+    <script src="/js/app/views/content/component/listtags.js"></script>
+    <script src="/js/app/views/content/component/listexcludetags.js"></script>
+    <script src="/js/app/views/content/component/lists.js"></script>
+    <script src="/js/app/views/content/component/notes.js"></script>
+    <script src="/js/app/views/content/component/notfound.js"></script>
+    <script src="/js/app/views/content/component/taglinktags.js"></script>
+    <script src="/js/app/views/content/component/uploadtags.js"></script>
+    <script src="/js/app/views/content/component/loading.js"></script>
+
+    <script src="/js/app/views/context/contextbar.js"></script>
+    <script src="/js/app/views/context/contextmenu.js"></script>
+
+    <script src="/js/app/views/context/components/retagitem.js"></script>
+    <script src="/js/app/views/context/components/retagmenu.js"></script>
+    <script src="/js/app/views/context/components/textmenu.js"></script>
+    <script src="/js/app/views/context/components/tagmenu.js"></script>
+    <script src="/js/app/views/context/components/statusmenu.js"></script>
+    <script src="/js/app/views/context/components/colormenu.js"></script>
+
+    <script src="/js/app/views/components/button.js"></script>
+    <script src="/js/app/views/components/checkbox.js"></script>
+    <script src="/js/app/views/components/group.js"></script>
+    <script src="/js/app/views/components/tag.js"></script>
+    <script src="/js/app/views/components/tagbox.js"></script>
+    <script src="/js/app/views/components/taglookup.js"></script>
+
+    <script src="/js/app/views/sidepane/boards.js"></script>
+    <script src="/js/app/views/sidepane/calendar.js"></script>
+    <script src="/js/app/views/sidepane/insights.js"></script>
+    <script src="/js/app/views/sidepane/map.js"></script>
+    <script src="/js/app/views/sidepane/notes.js"></script>
+    <script src="/js/app/views/sidepane/notfound.js"></script>
+    <script src="/js/app/views/sidepane/tags.js"></script>
+    <script src="/js/app/views/sidepane/trackers.js"></script>
+    <script src="/js/app/views/sidepane/search.js"></script>
+
+    <script src="/js/app/views/sidepane/component/checkitem.js"></script>
+    <script src="/js/app/views/sidepane/component/item.js"></script>
+    <script src="/js/app/views/sidepane/component/tags.js"></script>
+    <script src="/js/app/views/sidepane/component/types.js"></script>
+    <script src="/js/app/views/sidepane/component/trackers.js"></script>
+
+    <script src="/js/app/views/note/main.js"></script>
+    <script src="/js/app/views/note/edit.js"></script>
+    <script src="/js/app/views/note/view.js"></script>
+
+    <script src="/js/app/views/note/options/base.js"></script>
+    <script src="/js/app/views/note/options/note.js"></script>
+    <script src="/js/app/views/note/options/tag.js"></script>
+    <script src="/js/app/views/note/options/tracker.js"></script>
+
+    <script src="/js/app/views/note/options/components/extratags.js"></script>
+
+    <script src="/js/app/views/note/menu/base.js"></script>
+    <script src="/js/app/views/note/menu/quick.js"></script>
+    <script src="/js/app/views/note/menu/note.js"></script>
+    <script src="/js/app/views/note/menu/tag.js"></script>
+    <script src="/js/app/views/note/menu/tracker.js"></script>
+
+    <script src="/js/app/views/items/body.edit.js"></script>
+    <script src="/js/app/views/items/body.view.js"></script>
+
+    <script src="/js/app/views/items/container.edit.js"></script>
+    <script src="/js/app/views/items/container.view.js"></script>
+
+    <script src="/js/app/views/items/wrapper.edit.js"></script>
+    <script src="/js/app/views/items/wrapper.view.js"></script>
+
+    <script src="/js/app/views/items/group.edit.js"></script>
+    <script src="/js/app/views/items/group.view.js"></script>
+
+    <script src="/js/app/views/items/link.edit.js"></script>
+    <script src="/js/app/views/items/link.view.js"></script>
+
+    <script src="/js/app/views/items/numeric.edit.js"></script>
+    <script src="/js/app/views/items/numeric.view.js"></script>
+
+    <script src="/js/app/views/items/list.edit.js"></script>
+    <script src="/js/app/views/items/list.view.js"></script>
+    <script src="/js/app/views/items/listitem.edit.js"></script>
+    <script src="/js/app/views/items/listitem.view.js"></script>
+
+    <script src="/js/app/views/items/combo.edit.js"></script>
+    <script src="/js/app/views/items/combo.view.js"></script>
+
+    <script src="/js/app/views/items/choice.edit.js"></script>
+    <script src="/js/app/views/items/choice.view.js"></script>
+
+    <script src="/js/app/views/items/stopwatch.edit.js"></script>
+    <script src="/js/app/views/items/stopwatch.view.js"></script>
+
+    <script src="/js/app/views/items/countdown.edit.js"></script>
+    <script src="/js/app/views/items/countdown.view.js"></script>
+
+    <script src="/js/app/views/items/tag.edit.js"></script>
+    <script src="/js/app/views/items/tag.view.js"></script>
+
+    <script src="/js/app/views/items/tagbody.edit.js"></script>
+    <script src="/js/app/views/items/tagbody.view.js"></script>
+
+    <script src="/js/app/views/items/tags.edit.js"></script>
+    <script src="/js/app/views/items/tags.view.js"></script>
+
+    <script src="/js/app/views/items/text.edit.js"></script>
+    <script src="/js/app/views/items/text.view.js"></script>
+
+    <script src="/js/app/views/items/timestamp.edit.js"></script>
+    <script src="/js/app/views/items/timestamp.view.js"></script>
+
+    <script src="/js/app/views/items/contextswitch.edit.js"></script>
+    <script src="/js/app/views/items/contextswitch.view.js"></script>
+
+    <!-- ------------------- Routers ------------------- -->
+
+    <script src="/js/app/routers/router.js"></script>
+
+    <!-- ------------------- Main ------------------- -->
+
+    <script>
+        if (typeof Windows !== 'undefined') {
+            var firstScript = document.getElementsByTagName('script')[0];
+            var script = document.createElement('script');
+            script.src = "/js/app/misc/uwa.js";
+            //script.src = "ms-appx-web:///uwp/uwa.js";
+            firstScript.parentNode.insertBefore(script, firstScript);
+        }
+    </script>
+
+    <script src="/js/app/main.js"></script>
+
+    <!-- endbuild -->
+
+</head>
+<body>
+    <div id="root">
+        <div class="loadingdata">
+            <div class="loadingdatatext">Loading...</div>
+        </div>
+        <div id="fontFix"></div>
+    </div>
+</body>
+</html>

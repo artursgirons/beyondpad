@@ -1,0 +1,1 @@
+plato -r -t Beyondpad -d reports app/js/app api setup app.js config.js server.js gulpfile.js lib.js 

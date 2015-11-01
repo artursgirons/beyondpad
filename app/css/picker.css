@@ -1,0 +1,66 @@
+﻿.picker {
+}
+
+.picker .item {
+    width: 33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.picker .hint {
+    text-align:center;
+    _display:none; /*menu to be always visible*/
+}
+
+.picker .content {
+    display:none;
+    _display:block; /*menu to be always visible*/
+}
+
+.picker .content .root{
+    _padding-left:1px;
+    _padding-right:1px;
+}
+
+.picker:hover .hint, .picker.active .hint, .picker.fullview .hint{
+    display:none;
+}
+
+.picker:hover .content, .picker.active .content, .picker.fullview .content {
+    display:block;
+}
+
+.picker .content .root, .picker .content .sub {
+    background-color:#F5F5F5;
+    _background-color:rgba(245, 245, 245, 0.80);
+}
+
+.picker.active .content .root {
+    background-color: transparent;
+}
+
+.picker .item:hover {
+    background-color:#efefef;
+    _background-color:rgba(239, 239, 239, 0.80);
+    opacity: 1 !important;
+    border-radius:4px 4px 0 0;
+}
+
+.picker .sub .item:hover {
+    border-radius:0;
+}
+
+.picker .item.active {
+    background-color:#F5F5F5;
+    _background-color:rgba(245, 245, 245, 0.80);
+    opacity: 1 !important;
+    border-radius:4px 4px 0 0;
+}
+
+.picker .options {
+    padding:6px;
+}

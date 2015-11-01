@@ -1,0 +1,305 @@
+body {
+    font-family: 'Roboto Slab', Tahoma, Arial;
+    min-width: 1130px;
+}
+
+#header {
+    height: 400px;
+    background-color: #252525;
+    background-image: url('../img/home/header_bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#tagline {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    color: #DDDDDD;
+    width: 400px;
+    font-weight: 200;
+    padding: 35px 20px 0 0;
+}
+
+#tagline1, #tagline2 {
+    font-size: 22px;
+}
+
+#title {
+    font-size: 40px;
+    position: relative;
+    line-height: 80px;
+    color: white;
+}
+
+#icon {
+    position: absolute;
+    top: 8px;
+    left: -90px;
+    height: 67px;
+    width: 70px;
+}
+
+#laptop {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    height: 367px;
+    background-image: url('../img/home/laptop.png');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    margin-left: -88px;
+}
+
+    #laptop img {
+        display: none;
+    }
+
+#signincont {
+    padding-top: 31px;
+}
+
+#signin {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #DD5B3E;
+    padding: 5px 5px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 300;
+    width: 286px;
+    text-align: center;
+}
+
+#democont, #vidcont {
+    padding-top: 15px;
+}
+
+#demo, #vid {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #646464;
+    padding: 5px 5px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 300;
+    width: 286px;
+    text-align: center;
+}
+
+#vidcont {
+    display: none;
+}
+
+#signin:hover {
+    text-decoration: underline;
+}
+
+#demo:hover {
+    text-decoration: underline;
+}
+
+#wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+#content {
+    max-width: 845px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#introvideo {
+    display: block;
+    width: 560px;
+    max-width: 560px;
+    height: 315px;
+}
+
+.col {
+    display: inline-block;
+    width: 415px;
+    vertical-align: top;
+}
+
+.text {
+    display: inline-block;
+    width: 400px;
+    text-align: left;
+    vertical-align: top;
+    padding: 20px 20px 10px 0;
+}
+
+.colright .text {
+    padding-right: 0;
+}
+
+.text h3 {
+    font-size: 27px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#contacts {
+    text-align: center;
+    padding: 15px;
+}
+
+    #contacts a {
+        color: #666;
+        font-size: 20px;
+        font-weight: 300;
+        display: block;
+        padding-bottom: 15px;
+    }
+
+#presskit {
+    font-size: 16px !important;
+    padding-bottom: 0 !important;
+}
+
+#social {
+    text-align: center;
+    padding: 15px;
+}
+
+    #social .socialitem {
+        display: inline-block;
+        min-width: 150px;
+        vertical-align: top;
+    }
+
+.fb_iframe_widget {
+    vertical-align: top;
+}
+
+a {
+    color: #000000;
+}
+
+.text a {
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 4px;
+}
+
+#storelinkstitle {
+    display: none;
+}
+
+#storelinks {
+    white-space: nowrap;
+    margin-bottom: -4px;
+}
+
+.mobile.portrait #storelinks {
+    text-align: center;
+    white-space: normal;
+}
+
+.mobile.portrait #storelinkstitle {
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+.mobile.portrait #ergonote {
+    display: none;
+}
+
+.mobile.portrait body {
+    min-width: initial;
+}
+
+.mobile.portrait #laptop img {
+    display: none;
+}
+
+.mobile.portrait #tagline {
+    position: initial;
+    width: initial;
+}
+
+.mobile.portrait #laptop {
+    position: initial;
+    width: initial;
+    height: 250px;
+    background-image: url('../img/home/1200x630.png');
+    background-position: left top;
+    background-repeat: no-repeat;
+    bottom: 0;
+    background-size: cover;
+    margin-left: 0;
+}
+
+.mobile.portrait #header {
+    height: initial;
+    background-image: initial;
+    text-align: center;
+}
+
+.mobile.portrait #tagline {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+
+.mobile.portrait #title {
+    display: inline-block;
+}
+
+.mobile.portrait .col {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    width: auto;
+}
+
+.mobile.portrait .text p {
+    text-align: left;
+}
+
+.mobile.portrait #vidcont {
+    display: block;
+}
+
+.mobile.portrait #introvideo {
+    display: block;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mobile.portrait .text {
+    width: auto;
+    padding-right: 0;
+    display: block;
+}
+
+.mobile.portrait #trackergif {
+    text-align: center;
+}
+
+.mobile.portrait .expander {
+    margin-left: -25px;
+    margin-right: -25px;
+}

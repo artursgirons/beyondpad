@@ -1,0 +1,364 @@
+﻿a:not([href]) {
+    cursor:default !important;
+}
+
+#root {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    overflow:hidden;
+}
+
+.bg.dark{
+    background-color:#E8E8E8;
+}
+
+.bg.light{
+    background-color:#F8F8F8;
+}
+
+div{
+    outline:none;
+}
+
+
+.right {
+    float:right;
+}
+
+.graph {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.animate {
+    -webkit-transition: top linear 0.2s, left linear 0.2s, transform linear 0.2s ;
+    -moz-transition: top linear 0.2s, left linear 0.2s, transform linear 0.2s ;
+    -ms-transition: top linear 0.2s, left linear 0.2s, transform linear 0.2s ;
+    -o-transition: top linear 0.2s, left linear 0.2s, transform linear 0.2s ;
+    transition: top linear 0.2s, left linear 0.2s, transform linear 0.2s ;
+}
+
+.ui-draggable-dragging {
+    z-index: 1000;
+
+    -webkit-box-shadow: 10px 10px 25px 0 rgba(0,0,0,0.3);
+    -moz-box-shadow: 10px 10px 25px 0 rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 25px 0 rgba(0,0,0,0.3);
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.ui-draggable-dragging, .ui-sortable-helper {
+    z-index: 1000;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.front{
+    z-index:2000;
+}
+
+.mask{
+    z-index:1000;
+    background-color:rgba(255, 255, 255, 0.79);
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.hide {
+    display: none !important;
+}
+
+.space {
+    visibility:hidden;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(10, 10, 10, 0.40);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: rgba(10, 10, 10, 0.30);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: rgba(10, 10, 10, 0.30);
+}
+
+:-ms-input-placeholder {  
+    color: rgba(10, 10, 10, 0.30);
+}
+
+.scroll {
+    overflow:auto;
+}
+
+
+::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: rgba(128, 128, 128, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color:rgba(128, 128, 128, 0.35);
+}
+
+.noselect, #app {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+textarea, input {
+    -webkit-touch-callout: none;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.notemenu{
+    display:none;
+    background-color:rgba(245, 245, 245, 0.5);
+    font-size:11pt;
+    color:rgba(90, 90, 90, 0.7);
+    padding:2px;
+    position:absolute;
+    top:0;
+    right:0;
+    border-radius:0 0 0 2px;
+}
+
+.note:hover .notemenu{
+    display:block;
+}
+
+.noteid{
+    position:absolute;
+    top:-13px;
+    left:8px;
+    
+    border-width: 1px 1px 1px 1px;
+    border-style:solid;
+    border-color:#d8d8d8;
+}
+
+
+
+.notecontent div:last-child {
+    margin-bottom:0;
+}
+
+#notecontainer{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#notecreate{
+    margin-top:10px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+#createstrip {
+    width: 480px;
+    display:inline-block;
+    border:1px solid #bababa;
+    border-radius:2px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#ffffff;
+}
+ 
+#createstrip input {
+    width: 305px;
+    height: 20px;
+    padding: 6px 10px;
+    float: left;
+    font-family: 'Roboto Slab', serif;
+    font-size:1em;
+    color:#666;
+
+    border: 0;
+    outline:none;
+}
+ 
+#createstrip .quickadd {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display:inline-block;
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    
+    cursor: pointer;
+    line-height:32px;
+    height: 32px;
+    width: 150px;
+    overflow:hidden;
+    z-index:1;
+}
+
+.quickadditems{
+    background-color: #fafafa;
+    display:block;
+    border:1px solid #bababa;
+    border-left:1px solid #dddddd;
+    padding-left:6px;
+    margin-top:-1px;
+    margin-right:-1px;
+    color: #999;
+    text-align:left;
+    font-size:13pt;
+}
+
+#createstrip .quickadd:hover{
+    overflow:visible;
+}
+
+#createstrip .quickadd:hover .quickadditems {
+    border: 1px solid #bababa;
+}
+
+.button {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    display: inline-block;
+
+    border:1px solid #d8d8d8;
+    border-radius:3px;
+
+    font-family:'Roboto Slab', Arial, Tahoma;
+    
+    font-size: 16px;
+    line-height: 24px;
+
+    padding: 0 7px 0 4px;
+
+    color:#888;
+    margin-right:7px;
+    background-color:#FFF;
+
+    cursor:pointer;
+}
+
+.button.textless {
+    padding-right: 4px;
+}
+
+.button.textless i:first-child {
+    margin:0;
+}
+
+.button.drop {
+    padding: 0 0 0 4px;
+}
+
+.button.tick {
+    padding: 0 3px 0 4px;
+}
+
+.button .ticker {
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    color: white;
+    background-color: #999;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    font-family: arial;
+    margin-left: 5px;
+    border-radius: 2px;
+    position: relative;
+    top: -1px;
+}
+
+.button:hover {
+}
+
+.button i {
+    margin-right:4px;
+}
+
+.inactive {
+    opacity:0.5;
+    cursor:default !important;
+}
+
+.loadingdata {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.loadingdatatext {
+    position:absolute;
+
+    top:50%;
+
+    margin-top:-13px;
+
+    text-align:center;
+    width:100%;
+
+
+    margin-left:auto;
+    margin-right:auto;
+
+
+
+    font-family: Roboto Slab;
+    color: #666;
+    font-size: 21px;
+    font-weight: 300;
+}
+
+.contextpanetoggle {
+    position: absolute;
+    top: 48px;
+    left: -8px;
+    font-size: 18px;
+    color: #CCC;
+    cursor: pointer;
+}
+
+.loading * {
+    cursor:wait !important;
+}
+
+.pointer {
+    cursor:pointer;
+}

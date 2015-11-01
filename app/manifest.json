@@ -1,0 +1,12 @@
+﻿{
+    "name": "Beyondpad",
+    "icons": [
+        {
+            "src": "icon_128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "http://www.beyondpad.com/start",
+    "display": "standalone"
+}

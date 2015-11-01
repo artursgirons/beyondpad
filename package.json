@@ -1,0 +1,48 @@
+{
+  "name": "Beyondpad",
+  "version": "1.0.0",
+  "description": "Notes, boards and lists, templates and forms, tags and other tools for data driven note taking",
+  "homepage": "https://www.beyondpad.com/",
+  "author": {
+    "name": "Arturs Girons",
+    "email": "arturs@beyondpad.com",
+    "url": "http://piip.lv/"
+  },
+  "engines": {
+    "node": "0.10.38",
+    "npm": "2.8.4"
+  },
+  "dependencies": {
+    "JSONStream": "0.10.0",
+    "async": "0.9.0",
+    "bcrypt": "0.8.2",
+    "body-parser": "1.12.3",
+    "client-sessions": "0.7.0",
+    "express": "4.12.3",
+    "lodash": "3.7.0",
+    "mongoose": "4.0.2",
+    "morgan": "1.5.2",
+    "node-gcm": "0.9.15",
+    "nodemailer": "1.3.4",
+    "passport": "0.2.1",
+    "passport-facebook": "2.0.0",
+    "passport-facebook-token": "2.0.0",
+    "passport-google-oauth": "0.2.0",
+    "passport-google-token": "0.1.1",
+    "passport-local": "1.0.0",
+    "passport-twitter": "1.0.3",
+    "passport-twitter-token": "0.1.5",
+    "passport-windows-live-token": "^1.2.0",
+    "passport-windowslive": "^1.0.1"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-bundle-file": "0.3.0",
+    "gulp-rename": "1.2.2",
+    "gulp-replace": "0.5.4",
+    "gulp-uglify": "1.2.0",
+    "gulp-uglifycss": "1.0.4"
+  },
+  "private": true,
+  "main": "server.js"
+}
