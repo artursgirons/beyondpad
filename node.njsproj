@@ -41,6 +41,7 @@
     <Compile Include="api\routers\sync.js" />
     <Compile Include="api\routers\notes.js" />
     <Content Include="app\img\home\1200x630.png" />
+    <Content Include="app\img\home\github.png" />
     <Content Include="app\img\home\googleplay.png" />
     <Content Include="app\img\home\googleplay_soon.png" />
     <Content Include="app\img\home\windowsstore.png" />
