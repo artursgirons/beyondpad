@@ -13,7 +13,7 @@
             ' coming soon',
             React.DOM.div({ className: 'details' },
                 React.DOM.div(null, 'View or add notes and trackers in calendar view'),
-                React.DOM.div(null, 'Any data with date information can be seen hear')
+                React.DOM.div(null, 'Any data with date information can be seen here')
             )
         );
     },
