@@ -406,7 +406,7 @@ var noteData = function (ownerId, tagId) {
                         "data": {
                             "size": 17,
                             "center": false,
-                            "text": "Custom groups of related notes. Boards contain lists witch are simply set of tags that act as filters and input conditions"
+                            "text": "Custom groups of related notes. Boards contain lists which are simply set of tags that act as filters and input conditions"
                         },
                         "name": null,
                         "type": "text",
@@ -709,7 +709,7 @@ var noteData = function (ownerId, tagId) {
                         "type": "text",
                         "name": null,
                         "data": {
-                            "text": "Trackers can have combo-box & drop-down list. These items can have tags and trackers attached to them withch when chosen will be added to a note",
+                            "text": "Trackers can have combo-box & drop-down list. These items can have tags and trackers attached to them which when chosen will be added to a note",
                             "center": false,
                             "size": 17
                         }
