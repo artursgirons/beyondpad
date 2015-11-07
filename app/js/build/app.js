@@ -1,3 +1,5 @@
+var gaID = 'UA-48589837-1';
+
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
         (i[r].q = i[r].q || []).push(arguments)
@@ -5,9 +7,9 @@
     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-//ga('create', 'UA-48589837-1', { 'cookieDomain': 'none' });
+//ga('create', gaID, { 'cookieDomain': 'none' });
 
-ga('create', 'UA-48589837-1', 'auto');
+ga('create', gaID, 'auto');
 ga('require', 'displayfeatures');
 ga('send', 'pageview');
 
@@ -4327,13 +4329,14 @@ app.view.content.calendar = app.lib.element({
             ' coming soon',
             React.DOM.div({ className: 'details' },
                 React.DOM.div(null, 'View or add notes and trackers in calendar view'),
-                React.DOM.div(null, 'Any data with date information can be seen hear')
+                React.DOM.div(null, 'Any data with date information can be seen here')
             )
         );
     },
     componentDidUpdate: function (prevProps, prevState) {
     }
 });
+
 app.view.content.insights = app.lib.element({
     displayName: 'content.insights',
     componentWillMount: function () {
