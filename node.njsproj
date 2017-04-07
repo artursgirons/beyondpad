@@ -292,6 +292,7 @@
     <Content Include="app\reset_entry_point.html" />
     <Content Include="app\robots.txt" />
     <Content Include="app\signin_entry_point.html" />
+    <Content Include="npm-shrinkwrap.json" />
     <Content Include="package.json" />
     <Compile Include="app.js" />
     <Compile Include="config.js" />
