@@ -79,7 +79,7 @@ passport.use(new GoogleTokenStrategy({
 passport.use(new FacebookStrategy({
     clientID: config.auth.facebook.clientID,
     clientSecret: config.auth.facebook.clientSecret,
-    callbackURL: "/auth/facebook/callback",
+    callbackURL: "https://www.beyondpad.com/auth/facebook/callback",
     enableProof: false
 },
   function (accessToken, refreshToken, profile, done) {
