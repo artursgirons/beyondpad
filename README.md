@@ -1,4 +1,4 @@
-## Beyondpad
+[![Build Status](https://drone.gironi.xyz/api/badges/artursgirons/beyondpad/status.svg)](https://drone.gironi.xyz/artursgirons/beyondpad)
 
 https://beyondpad.com/
 

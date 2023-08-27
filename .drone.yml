@@ -12,8 +12,6 @@ steps:
       - name: dockersock
         path: /var/run/docker.sock
     environment:
-      PORT:
-        from_secret: PORT
       CONNECTIONSTRING:
         from_secret: CONNECTIONSTRING
       COOKIESECRET:
@@ -73,7 +71,7 @@ steps:
         -e EMAIL_SERVICE=$EMAIL_SERVICE
         -e EMAIL_USERNAME=$EMAIL_USERNAME
         -e EMAIL_PASSWORD=$EMAIL_PASSWORD
-        --publish=$PORT:8080
+        --publish=27802:8080
         --restart=always
         --name=beyondpad
         beyondpad:latest
