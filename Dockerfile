@@ -21,9 +21,9 @@ RUN \
 COPY --from=builder --link --chown=1001:1001 /app ./
 USER app
 
-EXPOSE 8080
+EXPOSE 27802
 
-ENV PORT 8080
+ENV PORT 27802
 ENV NODE_OPTIONS --openssl-legacy-provider
 
 CMD ["node", "server.js"]

@@ -7,7 +7,7 @@ var env = process.env.NODE_ENV || "prod";
 module.exports = {
   maxNoteLength: 2048,
   ipaddress: "127.0.0.1",
-  port: process.env.PORT || 8080,
+  port: process.env.PORT || 27802,
   connectionString: process.env.CONNECTIONSTRING,
   pathApp: __dirname + "/app",
   env: env,
