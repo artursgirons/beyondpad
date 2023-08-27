@@ -4,7 +4,7 @@
   "private": true,
   "main": "server.js",
   "description": "Notes, boards and lists, templates and forms, tags and other tools for data driven note taking",
-  "homepage": "https://beyondpad.com/",
+  "homepage": "https://www.beyondpad.com/",
   "author": {
     "name": "Arturs Girons",
     "url": "https://artursgirons.com/"
