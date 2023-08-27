@@ -74,6 +74,7 @@ steps:
         --publish=27802:8080
         --restart=always
         --name=beyondpad
+        --network="host"
         beyondpad:latest
 
 volumes:
