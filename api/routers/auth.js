@@ -3,7 +3,7 @@ var app = require('../../app');
 var login = require('../controllers/auth');
 var passport = require('passport');
 var Account = require('../models/account');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var lib = require('../../lib');
 var sync = require('../controllers/sync');
 

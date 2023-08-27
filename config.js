@@ -2,48 +2,48 @@
 
 var modulus = null;
 
-var env = process.env.NODE_ENV || 'prod';
+var env = process.env.NODE_ENV || "prod";
 
 module.exports = {
-    maxNoteLength: 2048,
-    ipaddress: '127.0.0.1',
-    port: process.env.PORT || process.env.port || 8080,
-    connectionString: process.env.DB || modulus || 'mongodb://localhost/beyondpad',
-    pathApp: __dirname + '/app',
-    env: env,
-    cookieSecret: '00000000000000000',
-    cryptoKey:'00000000000000000000000000000000',
-    gcmSender:'000000000000000000000000000000000000000',
-    auth: {
-        google: {
-            clientID: '000000000000000000000000000000000000000000000000000000000000000000000000',
-            clientSecret: '000000000000000000000000'
-        },
-        facebook: {
-            clientID: '000000000000000',
-            clientSecret: '00000000000000000000000000000000'
-        },
-        twitter: {
-            clientID: '0000000000000000000000000',
-            clientSecret: '00000000000000000000000000000000000000000000000000'
-        },
-        microsoft: {
-            clientID: '0000000000000000',
-            clientSecret: '00000000000000000000000000000000'
-        }
+  maxNoteLength: 2048,
+  ipaddress: "127.0.0.1",
+  port: process.env.PORT || 8080,
+  connectionString: process.env.CONNECTIONSTRING,
+  pathApp: __dirname + "/app",
+  env: env,
+  cookieSecret: process.env.COOKIESECRET,
+  cryptoKey: process.env.CRYPTOKEY,
+  gcmSender: process.env.GCMSENDER,
+  auth: {
+    google: {
+      clientID: process.env.GOOGLE_CLIENTID,
+      clientSecret: process.env.GOOGLE_CLIENTSECRET,
     },
-    email: {
-        service:'Gmail',
-        username: 'beyondpad@beyondpad.com',
-        password: '00000000000000000000'
+    facebook: {
+      clientID: process.env.FACEBOOK_CLIENTID,
+      clientSecret: process.env.FACEBOOK_CLIENTSECRET,
     },
-    root: __dirname,
-    htmlPath: {
-        app: '/app/app_entry_point.' + env + '.html',
-        demo: '/app/demo_entry_point.' + env + '.html',
-        home: '/app/home_entry_point.html',
-        login: '/app/signin_entry_point.html',
-        reset: '/app/reset_entry_point.html'
+    twitter: {
+      clientID: process.env.TWITTER_CLIENTID,
+      clientSecret: process.env.TWITTER_CLIENTSECRET,
     },
-    htmlCache: {}
+    microsoft: {
+      clientID: process.env.MICROSOFT_CLIENTID,
+      clientSecret: process.env.MICROSOFT_CLIENTSECRET,
+    },
+  },
+  email: {
+    service: process.env.EMAIL_SERVICE,
+    username: process.env.EMAIL_USERNAME,
+    password: process.env.EMAIL_PASSWORD,
+  },
+  root: __dirname,
+  htmlPath: {
+    app: "/app/app_entry_point." + env + ".html",
+    demo: "/app/demo_entry_point." + env + ".html",
+    home: "/app/home_entry_point.html",
+    login: "/app/signin_entry_point.html",
+    reset: "/app/reset_entry_point.html",
+  },
+  htmlCache: {},
 };

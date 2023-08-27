@@ -4,7 +4,7 @@ var lib = require('../../lib');
 
 var accountSchema = new db.Schema();
 
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 
 accountSchema.add({
     _deleted: Boolean,

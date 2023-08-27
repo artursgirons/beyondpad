@@ -1,26 +1,27 @@
 {
-  "name": "Beyondpad",
+  "name": "beyondpad",
   "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
   "description": "Notes, boards and lists, templates and forms, tags and other tools for data driven note taking",
-  "homepage": "https://www.beyondpad.com/",
+  "homepage": "https://beyondpad.com/",
   "author": {
     "name": "Arturs Girons",
-    "email": "arturs@beyondpad.com",
-    "url": "http://piip.lv/"
+    "url": "https://artursgirons.com/"
   },
-  "engines": {
-    "node": "0.10.38",
-    "npm": "2.8.4"
+  "scripts": {
+    "start": "node server.js",
+    "build": "node gulpfile.js"
   },
   "dependencies": {
-    "JSONStream": "0.10.0",
     "async": "0.9.0",
-    "bcrypt": "0.8.2",
+    "bcryptjs": "2.4.3",
     "body-parser": "1.12.3",
     "client-sessions": "0.7.0",
     "express": "4.12.3",
+    "JSONStream": "0.10.0",
     "lodash": "3.7.0",
-    "mongoose": "4.0.2",
+    "mongoose": "7.4.5",
     "morgan": "1.5.2",
     "node-gcm": "0.9.15",
     "nodemailer": "1.3.4",
@@ -32,8 +33,8 @@
     "passport-local": "1.0.0",
     "passport-twitter": "1.0.3",
     "passport-twitter-token": "0.1.5",
-    "passport-windows-live-token": "^1.2.0",
-    "passport-windowslive": "^1.0.1"
+    "passport-windows-live-token": "1.2.0",
+    "passport-windowslive": "1.0.1"
   },
   "devDependencies": {
     "gulp": "3.9.0",
@@ -42,7 +43,5 @@
     "gulp-replace": "0.5.4",
     "gulp-uglify": "1.2.0",
     "gulp-uglifycss": "1.0.4"
-  },
-  "private": true,
-  "main": "server.js"
+  }
 }

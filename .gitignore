@@ -166,3 +166,5 @@ $RECYCLE.BIN/
 /.ntvs_analysis.dat
 
 config.prod.js
+.env
+docker-compose.yml

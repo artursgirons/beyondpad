@@ -4,7 +4,7 @@ var morgan = require('morgan')
 
 app.enable('trust proxy');
 
-if (config.env !== 'prod') {
+if (config.env !== 'production') {
     app.use(morgan('dev'));
 }
 

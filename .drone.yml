@@ -1,0 +1,84 @@
+kind: pipeline
+name: default
+
+trigger:
+  branch:
+    - master
+
+steps:
+  - name: build and run
+    image: docker:dind
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    environment:
+      PORT:
+        from_secret: PORT
+      CONNECTIONSTRING:
+        from_secret: CONNECTIONSTRING
+      COOKIESECRET:
+        from_secret: COOKIESECRET
+      CRYPTOKEY:
+        from_secret: CRYPTOKEY
+      GCMSENDER:
+        from_secret: GCMSENDER
+      GOOGLE_CLIENTID:
+        from_secret: GOOGLE_CLIENTID
+      GOOGLE_CLIENTSECRET:
+        from_secret: GOOGLE_CLIENTSECRET
+      FACEBOOK_CLIENTID:
+        from_secret: FACEBOOK_CLIENTID
+      FACEBOOK_CLIENTSECRET:
+        from_secret: FACEBOOK_CLIENTSECRET
+      TWITTER_CLIENTID:
+        from_secret: TWITTER_CLIENTID
+      TWITTER_CLIENTSECRET:
+        from_secret: TWITTER_CLIENTSECRET
+      MICROSOFT_CLIENTID:
+        from_secret: MICROSOFT_CLIENTID
+      MICROSOFT_CLIENTSECRET:
+        from_secret: MICROSOFT_CLIENTSECRET
+      EMAIL_SERVICE:
+        from_secret: EMAIL_SERVICE
+      EMAIL_USERNAME:
+        from_secret: EMAIL_USERNAME
+      EMAIL_PASSWORD:
+        from_secret: EMAIL_PASSWORD
+    commands:
+      - >
+        docker build
+        --tag=beyondpad:latest
+        .
+      - >
+        docker rm
+        --force
+        beyondpad
+        ||
+        true
+      - >
+        docker run
+        --detach
+        -e CONNECTIONSTRING=$CONNECTIONSTRING
+        -e COOKIESECRET=$COOKIESECRET
+        -e CRYPTOKEY=$CRYPTOKEY
+        -e GCMSENDER=$GCMSENDER
+        -e GOOGLE_CLIENTID=$GOOGLE_CLIENTID
+        -e GOOGLE_CLIENTSECRET=$GOOGLE_CLIENTSECRET
+        -e FACEBOOK_CLIENTID=$FACEBOOK_CLIENTID
+        -e FACEBOOK_CLIENTSECRET=$FACEBOOK_CLIENTSECRET
+        -e TWITTER_CLIENTID=$TWITTER_CLIENTID
+        -e TWITTER_CLIENTSECRET=$TWITTER_CLIENTSECRET
+        -e MICROSOFT_CLIENTID=$MICROSOFT_CLIENTID
+        -e MICROSOFT_CLIENTSECRET=$MICROSOFT_CLIENTSECRET
+        -e EMAIL_SERVICE=$EMAIL_SERVICE
+        -e EMAIL_USERNAME=$EMAIL_USERNAME
+        -e EMAIL_PASSWORD=$EMAIL_PASSWORD
+        --publish=$PORT:8080
+        --restart=always
+        --name=beyondpad
+        beyondpad:latest
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
